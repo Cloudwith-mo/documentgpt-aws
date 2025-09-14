@@ -13,11 +13,12 @@ export default function Landing() {
         <div
           onDragOver={(e)=>{e.preventDefault(); setHover(true);}}
           onDragLeave={()=>setHover(false)}
-          onDrop={(e)=>{e.preventDefault(); router.push('/chat/new');}}
-          className={"h-40 border-2 border-dashed rounded-xl flex items-center justify-center cursor-pointer " + (hover ? "border-white" : "border-gray-600")}
+          onDrop={(e)=>{e.preventDefault(); setHover(false); router.push('/chat/new');}}
+          className={"h-40 border-2 border-dashed rounded-xl flex flex-col items-center justify-center cursor-pointer transition-colors " + (hover ? "border-blue-500 bg-blue-500/10" : "border-gray-600 hover:border-gray-500")}
           onClick={()=>router.push('/chat/new')}
         >
-          <span>Drag & drop a PDF or click to start</span>
+          <div className="text-4xl mb-2">📄</div>
+          <span className="text-sm">Drag & drop a PDF or click to start</span>
         </div>
       </div>
     </main>
