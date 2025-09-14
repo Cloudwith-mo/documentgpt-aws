@@ -1,0 +1,17 @@
+{
+  "name": "@docgpt/chat-lambda",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && cp dist/index.js ../../dist/chat-lambda/index.js && (cd ../../dist && zip -r chat-lambda.zip chat-lambda)",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@docgpt/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "24.3.3",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,7 @@
+region = "us-east-1"
+raw_bucket = "documentgpt-raw-1757813720"
+processed_bucket = "documentgpt-processed-1757813720"
+ddb_table = "docgpt"
+app_url = "http://localhost:3000"
+chat_zip = "../dist/chat-lambda.zip"
+ingest_zip = "../dist/ingest.zip"
